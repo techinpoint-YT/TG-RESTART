@@ -1,0 +1,29 @@
+# TGRestart Messages Configuration
+# MiniMessage formatting supported: https://docs.advntr.dev/minimessage/format.html
+
+# Message prefix
+prefix: "<gradient:red:gold>[TGRestart]</gradient> "
+
+# Command messages
+no-permission: "<red>You don't have permission to use this command!"
+reload-success: "<green>Configuration reloaded successfully!"
+invalid-time-format: "<red>Invalid time format! Use: 30s, 5m, 1h"
+restart-already-scheduled: "<red>A restart is already scheduled! Use /tgrestart cancel to cancel it."
+no-restart-scheduled: "<red>No restart is currently scheduled!"
+usage: "<yellow>Usage: /tgrestart <time|cancel|reload>"
+
+# Broadcast message when restart is scheduled
+schedule-message: "<red><bold>[!] <yellow>Server restart scheduled in <white>%time%<yellow>!"
+
+# Warning message format (shown at configured intervals)
+warning-message: "<gold><bold>[!] <yellow>Server restarting in <white>%time%<yellow>!"
+
+# Cancel message
+cancel-message: "<green><bold>[✓] <yellow>Scheduled restart has been cancelled."
+
+# Kick message shown to players
+kick-message: |
+  <red><bold>Server Restarting
+
+  <yellow>The server is restarting for maintenance.
+  <yellow>Please reconnect in a moment!

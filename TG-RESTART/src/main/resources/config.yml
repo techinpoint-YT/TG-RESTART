@@ -1,0 +1,90 @@
+# TGRestart Configuration
+# MiniMessage formatting supported: https://docs.advntr.dev/minimessage/format.html
+
+# ============================================
+# DISPLAY SETTINGS
+# ============================================
+
+# Enable/disable title display
+titles:
+  enabled: true
+  # Title text (top line)
+  title: "<red><bold>Server Restart"
+  # Subtitle text (bottom line) - %time% will be replaced with countdown
+  subtitle: "<yellow>Restarting in <white>%time%"
+  # Timing in ticks (20 ticks = 1 second)
+  fade-in: 10
+  stay: 30
+  fade-out: 10
+
+# Enable/disable action bar display
+action-bar:
+  enabled: true
+  # %time% will be replaced with countdown
+  format: "<gold><bold>⚠ <yellow>Restart in <white>%time% <gold><bold>⚠"
+
+# ============================================
+# CHAT ANNOUNCEMENTS
+# ============================================
+
+# Broadcast intervals (in seconds)
+# Messages will be sent at these times before restart
+# Default: 1 hour, 10 min, 1 min, 10 sec, 5, 4, 3, 2, 1
+broadcast-intervals:
+  - 3600  # 1 hour
+  - 600   # 10 minutes
+  - 60    # 1 minute
+  - 10    # 10 seconds
+  - 5     # 5 seconds
+  - 4     # 4 seconds
+  - 3     # 3 seconds
+  - 2     # 2 seconds
+  - 1     # 1 second
+
+# ============================================
+# RESTART EXECUTION
+# ============================================
+
+# Final title shown when restart begins
+final-title:
+  enabled: true
+  title: "<dark_red><bold>Server Restarting"
+  subtitle: "<red>Please reconnect in a moment..."
+  fade-in: 10
+  stay: 40
+  fade-out: 10
+
+# Commands to execute before restart (run as console)
+pre-restart-commands:
+  - "save-all"
+
+# Restart method
+# Options: BUKKIT_SHUTDOWN, SPIGOT_RESTART, COMMANDS_ONLY
+# - BUKKIT_SHUTDOWN: Uses Bukkit.shutdown()
+# - SPIGOT_RESTART: Uses Spigot's restart command
+# - COMMANDS_ONLY: Only executes commands, no automatic restart
+restart-method: SPIGOT_RESTART
+
+# Commands to execute for restart (only used if method is COMMANDS_ONLY)
+restart-commands:
+  - "stop"
+
+# ============================================
+# COUNTDOWN SETTINGS
+# ============================================
+
+# Update interval for countdown (in ticks, 20 = 1 second)
+# Lower values = more frequent updates (more resource intensive)
+# Higher values = less frequent updates (better performance)
+update-interval: 20
+
+# ============================================
+# ADVANCED
+# ============================================
+
+# Debug mode - prints additional information to console
+debug: false
+
+# Prevent server stop during restart
+# If true, the plugin will try to prevent other plugins from stopping the restart
+prevent-interruption: true

@@ -1,0 +1,22 @@
+name: TGRestart
+version: ${project.version}
+main: com.tgrestart.TGRestart
+api-version: '1.20'
+author: TGRestart
+description: Professional server restart plugin with countdown titles
+website: https://github.com/tgrestart/TGRestart
+
+commands:
+  tgrestart:
+    description: Main restart command
+    usage: |
+      /tgrestart <time> - Schedule a restart (e.g., 30s, 5m, 1h)
+      /tgrestart cancel - Cancel the active restart timer
+      /tgrestart reload - Reload the configuration
+    aliases: [restart, tr]
+    permission: tgrestart.admin
+
+permissions:
+  tgrestart.admin:
+    description: Allows access to all restart commands
+    default: op
